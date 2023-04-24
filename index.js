@@ -25,6 +25,9 @@ require('./middleware/passport')(passport)
 /**
  * Подключаем все роутры
  */
+app.get('/', (req, res) => {
+    res.send('ok')
+})
 app.use('/api/users', require('./routes/users.routes'))
 
 /**
